@@ -1,16 +1,17 @@
 ﻿namespace Legend.API.Controllers
 {
+    using Fanex.Data.Repository;
     using System.Threading.Tasks;
     using System.Web.Http;
 
     [AllowAnonymous]
     public class LegendController : ApiController
     {
-        private readonly LegendService legendService;
+        private readonly IDynamicRepository dynamicRepository;
 
-        public LegendController(LegendService legendService)
+        public LegendController(IDynamicRepository dynamicRepository)
         {
-            this.legendService = legendService;
+            this.dynamicRepository = dynamicRepository;
         }
 
         [HttpGet]
@@ -20,10 +21,17 @@
         }
 
         [HttpGet]
-        public async Task<IHttpActionResult> Get(string menuName)
+        public async Task<IHttpActionResult> Get(int id)
         {
-            var content = await legendService.GetLegend(menuName);
-            return Json(content);
+            var criteria = new GetLegendCriteria
+            {
+                MenuId = id
+            };
+
+            var legend = await dynamicRepository.GetAsync<LegendDTO>(criteria);
+            var legendHtml = legend == null ? string.Empty : legend.Legend;
+
+            return Json(legendHtml);
         }
     }
 }

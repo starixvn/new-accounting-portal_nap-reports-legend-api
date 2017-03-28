@@ -11,30 +11,9 @@ foreach(var site in sites)
 #><?xml version="1.0" encoding="utf-8"?>
 <configuration>
 	<configSections>
-		<section name="NapSettings" type="Fanex.NAP.Core.Configuration.NapSettings, Fanex.NAP.Core" />
 		<section name="Fanex.Logging" type="Fanex.Logging.Configuration.LoggingSettings, Fanex.Logging" />
-		<section name="Fanex.Caching" type="Fanex.Caching.Configuration.CacheSettings, Fanex.Caching" />
 	</configSections>
-	<NapSettings
-		Environment="<#= site.NapEnvironment #>"
-		EnableDirectLogin="1"
-		SiteId="<#= site.NapSiteId #>"
-		UnauthorizeUrl="~/Error/AccessDenied"
-		EnableReCheckin="false"
-		HubUrl=""
-		ServiceUrls="<#= site.NapServiceUrls #>"
-		AccessKey="<#= site.NapAccessKey #>" >
-	<Domain>
-	</Domain>
-	</NapSettings>
 	<Fanex.Logging msmqPath="<#= site.FanexLogPath #>" defaultCategory="<#= site.FanexLogDefaultCatalog #>" />
-
-	<Fanex.Caching cacheType="Fanex.Caching.Memory.MemoryCache, Fanex.Caching">
-        <connectionSettings>
-            <add name="CompactOnMemoryPressure" value="true" />
-            <add name="ExpirationScanFrequency" value="1" />
-        </connectionSettings>
-    </Fanex.Caching>
 
 	<connectionStrings configSource="App_Configuration\Web.ConnectionString.<#=site.Environment#>.config" />
 	<appSettings configSource="App_Configuration\Web.AppSettings.<#=site.Environment#>.config" />

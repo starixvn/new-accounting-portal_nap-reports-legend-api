@@ -1,4 +1,4 @@
-﻿<#@ import namespace="System" #>
+<#@ import namespace="System" #>
 <#
     var sites = new SiteInfo[]{
          new SiteInfo
@@ -67,91 +67,6 @@
             }
         }
 
-        public string NapEnvironment
-        {
-            get
-            {
-                switch(Environment)
-                {
-                    case SiteEnvironment.PRO:
-                    case SiteEnvironment.MNL:
-                        return "LIVE";
-                    case SiteEnvironment.UAT:
-					case SiteEnvironment.SIT:
-                    case SiteEnvironment.LOCAL:
-                    case SiteEnvironment.DEV:
-                    case SiteEnvironment.MASTER:
-                        return "UAT";
-
-                    default:
-                        return string.Empty;
-                }
-            }
-        }
-
-        public string NapSiteId
-        {
-            get
-            {
-                switch(Environment)
-                {
-                    case SiteEnvironment.PRO:
-                    case SiteEnvironment.MNL:
-                    case SiteEnvironment.UAT:
-					case SiteEnvironment.SIT:
-                        return "4";
-                    default:
-                        return "3";
-                }
-            }
-        }
-
-		public string NapServiceUrls
-		 {
-            get
-            {
-                switch(Environment)
-                {
-					case SiteEnvironment.DEV:
-					case SiteEnvironment.LOCAL:
-                    case SiteEnvironment.MASTER:
-						return "http://ha.nexdev.net:1711/api";
-                    case SiteEnvironment.SIT:
-						return "http://172.16.4.106:1710/api";
-                    case SiteEnvironment.UAT:
-						return "http://10.40.40.16:1710/api";
-					case SiteEnvironment.PRO:
-						return "http://10.40.40.22:1710/api";
-					case SiteEnvironment.MNL:
-                        return "http://10.2.98.3:1710/api";
-					default:
-                        return string.Empty;
-                }
-            }
-        }
-
-		public string NapAccessKey
-		 {
-            get
-            {
-                switch(Environment)
-                {
-					case SiteEnvironment.DEV:
-					case SiteEnvironment.LOCAL:
-                    case SiteEnvironment.MASTER:
-						return "HTAiA6W/kzs0PjSnm3ll1kD7tXPyDyO0gTeD8Nz6078=";
-                    case SiteEnvironment.SIT:
-						return "ZU5inpesUej+dCIxitApgXAiRhK0N7uCuVHCCjPyT9o=";
-                    case SiteEnvironment.UAT:
-					case SiteEnvironment.PRO:
-					case SiteEnvironment.MNL:
-                        return "ZU5inpesUej+dCIxitApgXAiRhK0N7uCuVHCCjPyT9o=";
-					default:
-                        return string.Empty;
-                }
-            }
-        }
-
 		public string FanexLogPath
 		{
 			get
@@ -160,7 +75,7 @@
                 {
 					case SiteEnvironment.LOCAL:
 					case SiteEnvironment.DEV:
-                        return @"FormatName:DIRECT=http://10.35.35.254:808/msmq/Private$/entlib";
+                        return @"FormatName:DIRECT=http://10.35.35.253:808/msmq/Private$/entlib";
 
 					case SiteEnvironment.UAT:
                         return @"FormatName:DIRECT=tcp://10.40.40.73/private$/entlib";
