@@ -1,0 +1,10 @@
+﻿
+
+// Generated helper templates
+// Generated items
+// D:\SourceCode\NAP.Reports\nap-legend-api\src\Legend.Api\App_Configuration\Web.PRO.config
+// D:\SourceCode\NAP.Reports\nap-legend-api\src\Legend.Api\App_Configuration\Web.MNL.config
+// D:\SourceCode\NAP.Reports\nap-legend-api\src\Legend.Api\App_Configuration\Web.UAT.config
+// D:\SourceCode\NAP.Reports\nap-legend-api\src\Legend.Api\App_Configuration\Web.MASTER.config
+// D:\SourceCode\NAP.Reports\nap-legend-api\src\Legend.Api\App_Configuration\Web.DEV.config
+// D:\SourceCode\NAP.Reports\nap-legend-api\src\Legend.Api\App_Configuration\Web.LOCAL.config

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Functions>
+  <Function Name="Legend Management">
+    <Setting Key="LegendManagement_SelReportLegend" SpName="Acc_FunctionLegendSel" DbName="DBMA.bodb_Maintenance.bodbAdminNet" > </Setting>
+  </Function>
+</Functions>
