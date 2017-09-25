@@ -28,7 +28,7 @@
                 MenuId = id
             };
 
-            var legend = await dynamicRepository.GetAsync<LegendDTO>(criteria);
+            var legend = await dynamicRepository.GetAsync<LegendObject>(criteria);
             var legendHtml = legend == null ? string.Empty : legend.Legend;
 
             return Json(legendHtml);

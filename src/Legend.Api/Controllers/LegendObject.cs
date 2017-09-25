@@ -1,6 +1,6 @@
 ﻿namespace Legend.API.Controllers
 {
-    public class LegendDTO
+    public class LegendObject
     {
         public int LegendId { get; set; }
 

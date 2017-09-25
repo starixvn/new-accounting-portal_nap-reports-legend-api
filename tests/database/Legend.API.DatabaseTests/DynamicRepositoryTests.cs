@@ -18,7 +18,7 @@ namespace Legend.API.DatabaseTests
 
             // Act
             var repository = new DynamicRepository();
-            var legend = await repository.GetAsync<LegendDTO>(criteria);
+            var legend = await repository.GetAsync<LegendObject>(criteria);
 
             // Assert
             Assert.That(legend.LegendId, Is.Not.Zero);
