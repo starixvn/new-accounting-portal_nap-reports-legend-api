@@ -1,8 +1,8 @@
 ﻿namespace Legend.API.Controllers
 {
-    using Fanex.Data.Repository;
     using System.Threading.Tasks;
     using System.Web.Http;
+    using Fanex.Data.Repository;
 
     [AllowAnonymous]
     public class LegendController : ApiController
@@ -12,12 +12,6 @@
         public LegendController(IDynamicRepository dynamicRepository)
         {
             this.dynamicRepository = dynamicRepository;
-        }
-
-        [HttpGet]
-        public IHttpActionResult Index()
-        {
-            return Json("Legend API");
         }
 
         [HttpGet]
