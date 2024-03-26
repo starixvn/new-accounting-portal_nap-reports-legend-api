@@ -27,6 +27,7 @@
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
     <TypeScriptToolsVersion>2.2</TypeScriptToolsVersion>
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -237,7 +238,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\TEST\DBMA.bodb_Maintenance.bodbAdminNet.xml" />
+    <Content Include="App_Data\TEST\DBMA.bodb_Maintenance.wsv_nap.xml" />
     <Content Include="App_Data\LIVE\DBMA.bodb_Maintenance.bodbAdminNet.xml" />
     <Content Include="App_Configuration\Configuration.ttinclude" />
     <Content Include="App_Configuration\Web.AppSettings.config.tt">
